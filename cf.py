@@ -3,13 +3,11 @@
 
 import numpy as np
 
-from rpy2.robjects.packages import importr
+import hadron
+
 import rpy2.robjects as robjects
 from rpy2.robjects import pandas2ri
 pandas2ri.activate() # necessary!
-
-hadron_lib_loc = "/home/simone/Documents/software-stack/install/hadron/master/"
-importr("hadron", lib_loc = hadron_lib_loc)
 
 class cf:
     def __new__(self):

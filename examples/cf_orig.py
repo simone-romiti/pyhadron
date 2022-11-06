@@ -5,7 +5,7 @@ import sys
 sys.path.append('../')
 
 import cf
-import conversion
+from conversion import *
 
 print("Creating cf_orig object from matrix")
 newcf = cf.cf()
@@ -16,14 +16,15 @@ M[5,3] = 77
 newcf_orig = cf.cf_orig(newcf_meta, M)
 
 print("Converting cf attribute to numpy array")
-myRcf = conversion.From_R(newcf_orig)
-print(myRcf["cf"])
 
-M1 = myRcf.to_numpy("cf")
+Rcf = from_R.get(newcf_orig, "cf")
+print(Rcf)
+
+M1 = from_R.to_numpy(Rcf)
 print(M1)
 
 print("Converting cf attribute to pandas dataframe")
-M2 = myRcf.to_pandas("cf")
+M2 = from_R.to_pandas(Rcf)
 print(M2)
 
 
