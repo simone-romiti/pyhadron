@@ -4,7 +4,7 @@ import numpy as np
 import sys 
 sys.path.append('../')
 
-import cf
+import cf as cf
 import convert.from_R as from_R
 # import convert.from_python as from_python
 
