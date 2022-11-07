@@ -6,7 +6,10 @@ sys.path.append('../')
 import numpy as np
 import pandas as pd
 import cf
-from conversion import *
+
+import convert.from_R as from_R
+import convert.from_python as from_python
+
 import rpy2.robjects as robjects
 
 jackknife_cov = robjects.r["jackknife_cov"]
@@ -25,7 +28,7 @@ dt = np.array(
 print(dt)
 
 
-r_dt = to_R(dt)
+r_dt = from_python.to_R(dt)
 r_dt2 = jackknife_cov(r_dt)
 
 print("----------------------")

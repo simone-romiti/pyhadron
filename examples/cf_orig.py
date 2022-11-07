@@ -5,7 +5,8 @@ import sys
 sys.path.append('../')
 
 import cf
-from conversion import *
+import convert.from_R as from_R
+# import convert.from_python as from_python
 
 print("Creating cf_orig object from matrix")
 newcf = cf.cf()
