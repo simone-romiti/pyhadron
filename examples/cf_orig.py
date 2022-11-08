@@ -4,17 +4,17 @@ import numpy as np
 import sys 
 sys.path.append('../')
 
-import cf as cf
+import Rhadron
 import convert.from_R as from_R
 # import convert.from_python as from_python
 
 print("Creating cf_orig object from matrix")
-newcf = cf.cf()
-newcf_meta = cf.cf_meta(newcf)
+newcf = Rhadron.cf()
+newcf_meta = Rhadron.cf_meta(newcf)
 
 M = np.zeros((10, 4))
 M[5,3] = 77 
-newcf_orig = cf.cf_orig(newcf_meta, M)
+newcf_orig = Rhadron.cf_orig(newcf_meta, M)
 
 print("Converting cf attribute to numpy array")
 

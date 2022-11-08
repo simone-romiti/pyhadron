@@ -5,7 +5,7 @@ sys.path.append('../')
 
 import numpy as np
 import pandas as pd
-import cf as cf
+from Rhadron import cf
 
 import convert.from_R as from_R
 import convert.from_python as from_python

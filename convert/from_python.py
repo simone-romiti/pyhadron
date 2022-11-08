@@ -12,3 +12,16 @@ def to_R(x):
     """
     return robjects.conversion.py2rpy(x)
 ####
+
+def to_R_list(attrs):
+    """
+    Returns rpy2 object ListVector
+
+        Parameters:
+                d : A python dictionary for the R list attributes 
+
+        Returns:
+                (rpy2.robjects.ListVector): R list with attributes specified by d
+    """
+    return robjects.ListVector(attrs)
+####
