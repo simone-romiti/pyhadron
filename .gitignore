@@ -1,3 +1,9 @@
 # information about the installation of `hadron` on the machine
 lib_loc.py
+
+# R wrappers fro hadron functions
+Rhadron.py
+
+# python garbage files (not needed in this repository)
 **__pycache__**
+
