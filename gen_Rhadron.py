@@ -67,9 +67,6 @@ def import_library(output, name, lib_loc=None):
 # Importing the libraries used in pyhadron
 # ----------------------------------------
 
-import lib_loc as lib_loc
-# import_library(output="Rwrap/base.py", name="base", lib_loc=lib_loc.base)
-# import_library(output="Rwrap/compositions.py", name="compositions", lib_loc=lib_loc.compositions)
-# import_library(output="Rwrap/graphics.py", name="graphics", lib_loc=lib_loc.graphics)
+import hadron_info
 
-import_library(output="Rhadron.py", name="hadron", lib_loc=lib_loc.hadron)
+import_library(output = "./pyhadron/Rhadron.py", name = "hadron", lib_loc = hadron_info.hadron)

@@ -4,9 +4,10 @@ import numpy as np
 import sys 
 sys.path.append('../')
 
-import Rhadron as hadron
-import convert.from_R as from_R
-import convert.from_python as from_python
+
+import pyhadron.Rhadron as hadron
+import pyhadron.convert.from_R as from_R
+import pyhadron.convert.from_python as from_python
 
 import matplotlib.pyplot as plt
 

@@ -5,10 +5,11 @@ sys.path.append('../')
 
 import numpy as np
 import pandas as pd
-from Rhadron import cf
 
-import convert.from_R as from_R
-import convert.from_python as from_python
+import pyhadron.Rhadron
+from pyhadron.convert import from_R as from_R
+from pyhadron.convert import from_python as from_python
+
 
 import rpy2.robjects as robjects
 

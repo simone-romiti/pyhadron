@@ -1,12 +1,9 @@
 # Creating a cf_orig from a matrix
 
 import numpy as np
-import sys 
-sys.path.append('../')
 
-import Rhadron
-import convert.from_R as from_R
-# import convert.from_python as from_python
+import pyhadron.Rhadron as Rhadron
+from pyhadron.convert import from_R as from_R
 
 print("Creating cf_orig object from matrix")
 newcf = Rhadron.cf()

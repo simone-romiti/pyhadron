@@ -7,3 +7,5 @@ Rhadron.py
 # python garbage files (not needed in this repository)
 **__pycache__**
 
+build/
+*pyhadron.egg-info*
