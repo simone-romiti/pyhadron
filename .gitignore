@@ -1,5 +1,5 @@
 # information about the installation of `hadron` on the machine
-hadron_info.py*
+hadron_info.py
 
 # R wrappers fro hadron functions
 Rhadron.py
