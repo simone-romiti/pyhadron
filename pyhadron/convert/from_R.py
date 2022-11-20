@@ -50,7 +50,11 @@ def to_dict(obj):
         Returns:
                 (dict): python dictionary
     """
-    return dict(obj.obj)
+    Rdict = {}
+    keys = obj.names
+    for i in range(len(keys)):
+         Rdict[keys[i]] = obj[i]
+    return Rdict
 ####
 
 def to_list(obj):
