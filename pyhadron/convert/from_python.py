@@ -1,4 +1,6 @@
 import rpy2.robjects as robjects
+import rpy2
+
 
 def to_R(x):
     """
@@ -12,6 +14,17 @@ def to_R(x):
     """
     return robjects.conversion.py2rpy(x)
 ####
+
+
+def to_Rfunction(fun):
+    """ Returns a function callable from R.
+    Achtung: be sure the function takes an argument `**kwargs`. 
+    This avoids errors for R calls that pass a keyword arguments 
+    whose syntax is not supported by python (e.g. `"boot.r"`)
+    """
+    return rpy2.rinterface.rternalize(fun)
+####
+
 
 def to_R_list(attrs):
     """
