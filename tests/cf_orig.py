@@ -2,16 +2,16 @@
 
 import numpy as np
 
-import pyhadron.Rhadron as Rhadron
+from pyhadron import hadron
 from pyhadron.convert import from_R as from_R
 
 print("Creating cf_orig object from matrix")
-newcf = Rhadron.cf()
-newcf_meta = Rhadron.cf_meta(newcf)
+newcf = hadron.cf()
+newcf_meta = hadron.cf_meta(newcf)
 
 M = np.zeros((10, 4))
 M[5,3] = 77 
-newcf_orig = Rhadron.cf_orig(newcf_meta, M)
+newcf_orig = hadron.cf_orig(newcf_meta, M)
 
 print("Converting cf attribute to numpy array")
 

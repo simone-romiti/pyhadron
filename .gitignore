@@ -9,3 +9,5 @@ Rhadron.py
 
 build/
 *pyhadron.egg-info*
+
+*.pdf

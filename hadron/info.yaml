@@ -1,15 +1,1 @@
-
-# local installation directory of R packages
-# example: "~/R/x86_64-pc-linux-gnu-library/4.1/"
-R_LIBS_USER: "~/R/x86_64-pc-linux-gnu-library/4.1/"
-
-# directory containing the source of your `hadron` library
-# default: ./
-src_dir: "./"
-
-# clean up: removing `hadron` source files and generated scripts after installation
-clean_up: True
-
-# installation directory
-# no default: if left empty the installation is aborted
-inst_dir: "~/Documents/temp/hadron/"
+../info.yaml

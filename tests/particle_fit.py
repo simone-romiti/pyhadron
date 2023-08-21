@@ -1,11 +1,9 @@
 # exponential fit
 
 import numpy as np
-import sys 
-sys.path.append('../')
+## !!! WORK IN PROGRESS !!!
 
-
-import pyhadron.Rhadron as hadron
+from pyhadron import hadron
 import pyhadron.convert.from_R as from_R
 import pyhadron.convert.from_python as from_python
 

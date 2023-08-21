@@ -9,16 +9,14 @@ setup(
     author_email='simone.romiti.1994@gmail.com',
     license='MIT',
     packages=find_packages(),
-    install_requires=['rpy2', 'pandas', 'numpy', 'matplotlib'],
+    install_requires=['rpy2', 'pandas', 'numpy', 'matplotlib', "pyyaml"],
+    package_data={"pyhadron": ['info.yaml']},
     classifiers=[
         'Development Status :: 1 - Planning',
         'Intended Audience :: Science/Research',
         'License :: MIT',  
         'Operating System :: POSIX :: Linux',        
-        'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
     ],
 )
 
-import gen_Rhadron # generating hadron wrappers
