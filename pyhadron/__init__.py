@@ -44,5 +44,7 @@ HADRON_LOC = os.path.abspath(os.path.expanduser(nd["hadron_inst_dir"]))
 # path to the hadron documentation
 HADRON_DOC = glob.glob(os.path.join(HADRON_LOC, "hadron_*.pdf"))
 
+print("Loading hadron from:", HADRON_LOC)
 hadron = importr('hadron', lib_loc = HADRON_LOC) # hadron package
+
 

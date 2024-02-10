@@ -11,3 +11,9 @@ build/
 *pyhadron.egg-info*
 
 *.pdf
+
+## scripts automatically generated during installation
+hadron/clean_up.sh
+hadron/deps.sh
+hadron/hadron_inst.sh
+hadron/manual.sh

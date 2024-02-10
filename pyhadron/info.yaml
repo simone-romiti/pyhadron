@@ -1,7 +1,7 @@
 
 # local installation directory of R packages
 # example: "~/R/x86_64-pc-linux-gnu-library/4.1/"
-R_LIBS_USER: "~/R/x86_64-pc-linux-gnu-library/4.1/"
+R_LIBS: "~/R/x86_64-pc-linux-gnu-library/4.1/"
 
 # directory containing the source of your `hadron` library
 # default: ./
@@ -12,4 +12,4 @@ clean_up: True
 
 # installation directory
 # no default: if left empty the installation is aborted
-hadron_inst_dir: "~/Documents/temp/hadron/"
+hadron_inst_dir: "~/R/x86_64-pc-linux-gnu-library/4.1/"

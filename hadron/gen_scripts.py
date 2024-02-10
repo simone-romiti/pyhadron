@@ -11,20 +11,20 @@ with open(yaml_file_path, "r") as yaml_file:
 
 hadron_src_dir = nd["hadron_src_dir"]+"hadron_github"
 hadron_inst_dir = nd["hadron_inst_dir"]
-R_LIBS_USER = nd["R_LIBS_USER"]
+R_LIBS = nd["R_LIBS"]
 
 if(hadron_inst_dir == ""):
     raise ValueError("Invalid installation path: \"{hadron_inst_dir}\"".format(hadron_inst_dir=hadron_inst_dir))
 ####
-elif(R_LIBS_USER==""):
-    raise ValueError("Invalid R packages installation path: \"{R_LIBS_USER}\"".format(R_LIBS_USER=R_LIBS_USER))
+elif(R_LIBS==""):
+    raise ValueError("Invalid R packages installation path: \"{R_LIBS}\"".format(R_LIBS=R_LIBS))
 ####
 
 hadron_src_dir = os.path.abspath(os.path.expanduser(hadron_src_dir))
 hadron_inst_dir = os.path.abspath(os.path.expanduser(hadron_inst_dir))
-R_LIBS_USER = os.path.abspath(os.path.expanduser(R_LIBS_USER))
+R_LIBS = os.path.abspath(os.path.expanduser(R_LIBS))
 
-cmd1 = """Rscript ./dependencies.R {R_LIBS_USER}""".format(R_LIBS_USER=R_LIBS_USER)
+cmd1 = """export R_LIBS={R_LIBS} \nmkdir -p ${{R_LIBS}} \nRscript ./dependencies.R {R_LIBS}""".format(R_LIBS=R_LIBS)
 
 with open('deps.sh', 'w') as deps:
     deps.write(cmd1)
@@ -51,7 +51,7 @@ with open('hadron_inst.sh', 'w') as hadron_inst:
 
 cmd3 = """
 # generate pdf documentation    
-Rscript -e "devtools::build_manual(pkg=\\"{hadron_src_dir}\\", path=\\"{hadron_inst_dir}\\")"
+Rscript -e "devtools::build_manual(pkg=\\"{hadron_src_dir}\\", path=\\"{hadron_inst_dir}/hadron/\\")"
 
 """.format(hadron_src_dir=hadron_src_dir, hadron_inst_dir=hadron_inst_dir)
 
