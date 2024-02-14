@@ -1,7 +1,8 @@
 
 # Installation of `hadron`
 
-This folder information on how to install the [`hadron`](https://github.com/HISKP-LQCD/hadron) library on your machine.
+Information on how to install the [`hadron`](https://github.com/HISKP-LQCD/hadron) library on your machine.
+The scripts will install also `R` packages commond in the analysis of ETMC ensembles.
 
 ## Package dependencies
 

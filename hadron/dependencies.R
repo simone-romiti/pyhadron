@@ -36,6 +36,10 @@ inst_pkg("boot")
 inst_pkg("pdftools")
 inst_pkg("ggrepel")
 inst_pkg("reshape2")
+inst_pkg("ggtext")
+inst_pkg("ggforce")
+inst_pkg("ggstance")
+
 
 # this is necessary: see https://github.com/HISKP-LQCD/hadron/issues/308
 devtools::install_github('r-lib/cli')

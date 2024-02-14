@@ -5,6 +5,7 @@ sudo apt-get -y install libpoppler-cpp-dev
 sudo apt-get -y install libxml2-dev
 sudo apt-get -y install libmagick++-dev
 sudo apt-get -y install openjdk-11-jdk openjdk-11-jre
+sudo apt-get -y install libudunits2-dev
 
 sudo R CMD javareconf
 
